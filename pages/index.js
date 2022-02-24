@@ -17,8 +17,8 @@ export default function IndexPage({ projects }) {
   return (
     <Layout>
       <Head>
-        <title>Raihan Ak</title>
-        <meta name="description" content="Personal site of Raihan Ak" />
+        <title>Raihan Akbar</title>
+        <meta name="description" content="Personal site of Raihan Akbar" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <script async defer data-domain="jasonlong.me" src="https://plausible.io/js/plausible.js" />
         <link rel="icon" type="image/png" sizes="32x32" href="/reicon-32x32.png" />
@@ -28,7 +28,7 @@ export default function IndexPage({ projects }) {
       <div className="flex flex-col mx-auto text-gray-900 bg-white max-w-screen-xl dark:bg-gray-900">
         <Hero />
         <About />
-        {/* <Logos /> */}
+        <Logos />
         <Projects projects={projects} dark={darkModeActive} />
       </div>
     </Layout>

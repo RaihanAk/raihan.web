@@ -61,8 +61,9 @@ export default function Project({ content, dark, reverse }) {
           {content.description}
         </p>
         <p className="mt-4">
+          {/* Shows repo's stargazer count
           <StarIcon size={16} />
-          <span className="inline-block ml-2 align-middle">{data && data.stargazers_count}</span>
+          <span className="inline-block ml-2 align-middle">{data && data.language}</span> */}
         </p>
       </div>
     </div>
