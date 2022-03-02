@@ -1,11 +1,21 @@
 # Hi. I'm Re
-![Node.js CI](https://github.com/jasonlong/jasonlong.me/workflows/Node.js%20CI/badge.svg)
 
-This is WIP for personal site
+WIP for personal site
 
 <endl>
 Using :
 
 * Next.js
 * Tailwind CSS
-* Three.js
+
+<br>
+Start by running 
+
+```markdown
+
+1. npm install
+2. npm run dev
+
+```
+
+Greatly inspired from [JasonLong](https://github.com/jasonlong)
