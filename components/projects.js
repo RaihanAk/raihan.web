@@ -11,7 +11,7 @@ export default function Projects({ projects, dark }) {
       </div>
 
       <h2 className="px-8 pb-4 mt-4 mb-4 font-black text-center text-large md:text-xl dark:text-gray-100">
-        Projects I've been part of and worked on
+        Projects I've worked on
       </h2>
 
       {projects.map((project, i) => (

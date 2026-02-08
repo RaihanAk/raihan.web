@@ -8,11 +8,13 @@ export default function Projects() {
       </div>
 
       <h2 className="px-8 pb-4 mt-4 font-black text-center text-large md:text-xl dark:text-gray-100">
-        I&apos;m an Unity developer.
+        I&apos;m a Game Developer.
       </h2>
 
       <p className="px-8 mx-auto mb-16 text-base text-center text-gray-700 md:text-xl dark:text-gray-500 md:px-20">
-        I live in Bekasi, Indonesia and I develop mobile and VR application using Unity.
+        I develop game using Unity and Unreal game engine. <br/>
+        A passionate programmer at hearts. <br/>
+        And a big-time music enjoyer, no matter the genres.
       </p>
 
       <h2 className="px-8 pb-16 mt-16"/>
