@@ -1,20 +1,23 @@
-import GitHub from './icons/github'
-import Twitter from './icons/twitter'
+import { useDarkMode } from 'next-dark-mode'
+import LinkedIn from './icons/linkedin'
 
 export default function SocialMediaIcons() {
+  const { darkModeActive } = useDarkMode()
+
   return (
     <>
       <a
-        href="https://github.com/RaihanAk/"
-        className="w-8 mr-5 transition-colors duration-150 text-gray-700 hover:text-gray-900 dark:text-gray-400 dark-hover:text-gray-100"
+        href="https://www.linkedin.com/in/raihan-akbar/"
+        target="_blank"
+        rel="noopener noreferrer"
+        className={`w-8 mr-5 transition-colors duration-150 ${
+          darkModeActive 
+            ? 'text-gray-400 hover:text-white' 
+            : 'text-gray-700 hover:text-gray-900'
+        }`}
+        aria-label="LinkedIn"
       >
-        <GitHub />
-      </a>
-      <a
-        href="https://twitter.com/raidiance__"
-        className="w-8 mr-5 transition-colors duration-150 text-gray-700 hover:text-gray-900 dark:text-gray-400 dark-hover:text-gray-100"
-      >
-        <Twitter />
+        <LinkedIn />
       </a>
     </>
   )

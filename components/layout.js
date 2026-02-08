@@ -1,5 +1,6 @@
 import { useDarkMode } from 'next-dark-mode'
 import SiteHeader from './site-header'
+import Footer from './footer'
 
 export default function Layout({ children }) {
   const { darkModeActive } = useDarkMode()
@@ -9,6 +10,7 @@ export default function Layout({ children }) {
       <div className="bg-white dark:bg-gray-900">
         <SiteHeader />
         {children}
+        <Footer />
       </div>
     </div>
   )
