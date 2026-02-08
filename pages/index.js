@@ -39,7 +39,15 @@ export async function getStaticProps() {
   const projectsDirectory = path.join(process.cwd(), 'projects')
   const fileNames = fs.readdirSync(projectsDirectory)
 
-  const projects = fileNames.map(fileName => {
+  // Filter to only .md files in the root directory (exclude subdirectories)
+  const mdFiles = fileNames.filter(fileName => {
+    const fullPath = path.join(projectsDirectory, fileName)
+    const isFile = fs.statSync(fullPath).isFile()
+    const isMdFile = fileName.endsWith('.md')
+    return isFile && isMdFile
+  })
+
+  const projects = mdFiles.map(fileName => {
     const fullPath = path.join(projectsDirectory, fileName)
     const fileContents = fs.readFileSync(fullPath, 'utf8')
     const matterResult = matter(fileContents)

@@ -88,7 +88,7 @@ export default function Project({ content, dark, reverse }) {
           })
          }
         >
-          <a href={content.url}>
+          <a href={content.url} className="block">
             {dark ? (
               <Image
                 src={currentImage.srcDark || currentImage.src}
@@ -112,43 +112,43 @@ export default function Project({ content, dark, reverse }) {
 
           {/* Navigation Controls */}
           {hasMultipleImages && (
-            <div className="absolute inset-0 flex items-center justify-between p-4 pointer-events-none">
-              <button
-                onClick={(e) => {
-                  e.preventDefault()
-                  e.stopPropagation()
-                  goToPrevious()
-                }}
-                className="pointer-events-auto bg-black bg-opacity-50 hover:bg-opacity-70 text-white rounded-full p-2 transition-all"
-                aria-label="Previous image"
-              >
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-                </svg>
-              </button>
-              <button
-                onClick={(e) => {
-                  e.preventDefault()
-                  e.stopPropagation()
-                  goToNext()
-                }}
-                className="pointer-events-auto bg-black bg-opacity-50 hover:bg-opacity-70 text-white rounded-full p-2 transition-all"
-                aria-label="Next image"
-              >
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
-              </button>
-            </div>
-          )}
-
-          {/* Image Counter */}
-          {hasMultipleImages && (
-            <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 pointer-events-none">
-              <div className="bg-black bg-opacity-50 text-white px-3 py-1 rounded-full text-sm">
-                {currentImageIndex + 1} / {images.length}
+            <>
+              <div className="absolute inset-0 flex items-center justify-between p-4 pointer-events-none">
+                <button
+                  onClick={(e) => {
+                    e.preventDefault()
+                    e.stopPropagation()
+                    goToPrevious()
+                  }}
+                  className="pointer-events-auto bg-black bg-opacity-50 hover:bg-opacity-70 text-white rounded-full p-2 transition-all z-10"
+                  aria-label="Previous image"
+                >
+                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                  </svg>
+                </button>
+                <button
+                  onClick={(e) => {
+                    e.preventDefault()
+                    e.stopPropagation()
+                    goToNext()
+                  }}
+                  className="pointer-events-auto bg-black bg-opacity-50 hover:bg-opacity-70 text-white rounded-full p-2 transition-all z-10"
+                  aria-label="Next image"
+                >
+                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </button>
               </div>
-            </div>
+
+              {/* Image Counter */}
+              <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 pointer-events-none z-10">
+                <div className="bg-black bg-opacity-50 text-white px-3 py-1 rounded-full text-sm">
+                  {currentImageIndex + 1} / {images.length}
+                </div>
+              </div>
+            </>
           )}
         </div>
       </div>
@@ -158,6 +158,9 @@ export default function Project({ content, dark, reverse }) {
             {content.title}
           </a>
         </h3>
+        <p>
+          {content.projectBrief}
+        </p> <br/>
         <p>
           {content.description}
         </p> <br/>

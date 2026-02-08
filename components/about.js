@@ -12,9 +12,9 @@ export default function Projects() {
       </h2>
 
       <p className="px-8 mx-auto mb-16 text-base text-center text-gray-700 md:text-xl dark:text-gray-500 md:px-20">
-        I develop game using Unity and Unreal game engine. <br/>
-        A passionate programmer at hearts. <br/>
-        And a big-time music enjoyer, no matter the genres.
+        I develop games using Unity and Unreal game engines. <br/>
+        A passionate programmer at heart. <br/>
+        And a big-time music enthusiast, no matter the genre.
       </p>
 
       <h2 className="px-8 pb-16 mt-16"/>
